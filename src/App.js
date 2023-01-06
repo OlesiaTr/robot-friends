@@ -7,6 +7,7 @@ import { SearchBar } from "./SearchBar";
 
 // Styles
 import "./App.css";
+import { Scroll } from "./Scroll";
 
 class App extends Component {
   state = {
@@ -33,7 +34,9 @@ class App extends Component {
       <div className="tc">
         <h1 className="f1 mb3">ROBOFRIENDS</h1>
         <SearchBar onChange={this.handleChange} />
-        <CardList data={filteredRobotsArr} />
+        <Scroll>
+          <CardList data={filteredRobotsArr} />
+        </Scroll>
       </div>
     );
   }
